@@ -14,7 +14,7 @@ npm run dev       # http://localhost:4321/portfolio/
 npm run build     # 型チェック + dist/ に書き出し
 ```
 
-`main` に push すると公開サイトが更新される。
+公開前のため、デプロイは今は手動実行のみ（`.github/workflows/deploy.yml` 参照）。公開後は `main` への push で自動更新する。
 
 ## 作品を書く・追加する
 
