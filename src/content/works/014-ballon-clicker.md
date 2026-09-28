@@ -2,12 +2,35 @@
 title: "BALLON CLICKER"
 order: 14
 category: game
-tags: [Unity, C#]
-# summary: 
-# period: 
-# team: 
-# role: 
-# hours: 
-# thumbnail: ../../assets/works/014-ballon-clicker.png
-# youtube: 
+tags: [Unity, C#, 2D, クリッカー, 個人制作]
+summary: "風船をクリックで割ってスコアを稼ぐ 2D クリッカーゲーム。"
+period: "2024年2月（1週間）"
+team: "個人制作"
+hours: 10
+youtube: "https://youtu.be/3d5jUWJI6Ec"
 ---
+
+## 概要
+
+- ジャンル: 2Dクリッカー
+- 開発環境: Unity 2022.3.12f1
+- 使用言語: C#
+
+## 操作方法
+
+| 操作 | 内容 |
+|---|---|
+| 左クリック | 風船を割る |
+| Backspace | ゲームを強制終了 |
+
+## 制作について
+
+同時期に出ていた C言語のコンソールゲームの課題に力を入れるため、短時間で遊べるミニゲームとして作りました。
+
+- 割った風船に書かれたポイントがスコアに加算されます
+- 風船は色ごとにランダムな動きをします
+- 一定時間ごとにスポナーが風船を生成します
+
+## 学んだこと
+
+- 今の技術力なら、簡単なゲームを短時間で作れること

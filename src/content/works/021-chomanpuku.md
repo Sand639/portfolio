@@ -2,12 +2,41 @@
 title: "張満腹"
 order: 21
 category: game
-tags: [C++, DirectX11]
-# summary: 
-# period: 
-# team: 
-# role: 
-# hours: 
-# thumbnail: ../../assets/works/021-chomanpuku.png
-# youtube: 
+tags: [C言語, C++, DirectX11, Joy-Con, 2D, アクション, チーム制作]
+summary: "Joy-Con を傾けてプレイヤーを動かし、料理の材料を集める 2 人用 2D アクション。1日で制作。"
+period: "2024年12月（1日）"
+team: "3人チーム（プログラマー2・プランナー1）"
+role: "UI・エンジン部分・シーン遷移"
+hours: 10
 ---
+
+## 概要
+
+- ジャンル: 2Dアクション
+- 開発環境: Visual Studio 2022 / DirectX 11
+- 使用言語: C言語 / C++
+- プレイ人数: 2人
+
+Joy-Con を傾けてプレイヤーを動かし、袋の中に材料を集めます。料理の材料が全部そろうと料理が完成し、スコアに加算されます。
+
+## 操作方法
+
+| 操作 | 内容 |
+|---|---|
+| Joy-Con を傾ける | プレイヤーを移動 |
+
+## 制作について
+
+1日で作る制作で、インゲーム周りの実装が間に合うか心配されていましたが、得意な UI 周りを担当して仕上げました。習いたての STL コンテナを使ってみようと考え、内部処理に list と map を使っています。
+
+## 担当
+
+- UI のプログラム
+- ゲームエンジンにあたる部分
+- シーン遷移
+- チームメンバーへの JoyShockLibrary の使い方の共有
+
+## 学んだこと
+
+- list、map の使い方
+- list と vector の違いと使い分け

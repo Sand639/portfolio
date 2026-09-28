@@ -2,12 +2,36 @@
 title: "ハック＆スラッシュ"
 order: 23
 category: game
-tags: [C++, Siv3D]
-# summary: 
-# period: 
-# team: 
-# role: 
-# hours: 
-# thumbnail: ../../assets/works/023-hack-and-slash.png
-# youtube: 
+tags: [C言語, C++, Siv3D, 2D, アクション, 個人制作]
+summary: "右クリックで移動し、バット・弓・爆撃で戦う 2D アクション。デザインパターンを学ぶ課題で制作。"
+period: "2024年1月（2週間）"
+team: "個人制作"
+hours: 15
+youtube: "https://youtu.be/PT4lN7MfAXQ"
 ---
+
+## 概要
+
+- ジャンル: 2Dアクション
+- 開発環境: Visual Studio 2022 / Siv3D
+- 使用言語: C言語 / C++
+
+## 操作方法
+
+| 操作 | 内容 |
+|---|---|
+| 右クリック | クリックした地点へ移動 |
+| Q | バット攻撃 |
+| W | 弓攻撃 |
+| E | 爆撃攻撃 |
+| S | その場で停止 |
+
+## 制作について
+
+授業でデザインパターン、クラス図、シーケンス図、STL コンテナ、Siv3D を学び、それらを使って C++ に慣れるという課題で制作しました。vector や unique_ptr を使ったり、クラスをワールドに登録してまとめて処理したりと、C++ らしいコードの書き方を学べました。
+
+## 学んだこと
+
+- STL コンテナ
+- デザインパターン
+- デコレーターの考え方

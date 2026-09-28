@@ -215,6 +215,22 @@ const facts = [
   .prose :global(code) { padding: 1px 6px; border-radius: 4px; background: var(--surface); font-size: 0.9em; }
   .prose :global(pre) { padding: 16px; border-radius: 8px; overflow-x: auto; }
   .prose :global(pre code) { padding: 0; background: none; }
+  .prose :global(ul) { padding-left: 1.4em; }
+  .prose :global(table) {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+  .prose :global(th),
+  .prose :global(td) {
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+  }
+  .prose :global(th) { background: var(--surface); font-weight: 600; white-space: nowrap; }
 
   .preparing {
     margin-top: 36px;
