@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Gallery from '../components/Gallery.astro';
+import { getWorks } from '../lib/works';
+
+const works = await getWorks();
+---
+
+<BaseLayout>
+  <div class="container">
+    <section class="hero">
+      <h1>作品集</h1>
+      <p>ゲーム・技術・CG の制作物をまとめています。新しい作品が上に並びます。</p>
+    </section>
+    <Gallery works={works} />
+  </div>
+</BaseLayout>
+
+<style>
+  .hero { padding: 48px 0 28px; }
+  h1 { font-size: 1.75rem; }
+  .hero p { margin: 8px 0 0; color: var(--muted); }
+  @media (min-width: 768px) {
+    .hero { padding: 64px 0 32px; }
+    h1 { font-size: 2.125rem; }
+  }
+</style>

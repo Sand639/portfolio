@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { profile } from '../data/profile';
+---
+
+<BaseLayout title="プロフィール">
+  <div class="container">
+    <section class="head">
+      <h1>{profile.name}</h1>
+      <p class="en">{profile.nameEn}</p>
+      <a class="gh" href={profile.github} target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z" /></svg>
+        GitHub（Sand639）
+      </a>
+    </section>
+
+    <section class="block">
+      <h2>資格</h2>
+      <ul class="list">
+        {
+          profile.certifications.map((c) => (
+            <li>
+              <span class="date">{c.date}</span>
+              <span>{c.name}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .head { padding: 48px 0 8px; }
+  h1 { font-size: 1.75rem; }
+  .en { margin: 2px 0 0; color: var(--muted); letter-spacing: 0.04em; }
+  .gh {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .gh:hover { border-color: var(--accent); }
+  .gh svg { width: 18px; height: 18px; fill: currentColor; }
+
+  .block { max-width: 760px; margin-top: 48px; }
+  h2 { margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); font-size: 1.125rem; }
+  .list { margin: 0; padding: 0; list-style: none; }
+  .list li {
+    display: grid;
+    grid-template-columns: 7.5em 1fr;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .date { color: var(--muted); font-variant-numeric: tabular-nums; }
+  @media (max-width: 480px) {
+    .list li { grid-template-columns: 1fr; gap: 0; }
+    .date { font-size: 0.8125rem; }
+  }
+</style>

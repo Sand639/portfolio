@@ -1,0 +1,109 @@
+---
+import '../styles/global.css';
+import { url } from '../lib/works';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const SITE_NAME = '大槻 海斗 作品集';
+const { title, description = '大槻 海斗（Ohtsuki Kaito）のゲーム・技術・CG 作品集' } = Astro.props;
+const pageTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
+const path = Astro.url.pathname;
+const nav = [
+  { href: url('/'), label: '作品', active: path === url('/') || path.startsWith(url('/works/')) },
+  { href: url('/profile/'), label: 'プロフィール', active: path.startsWith(url('/profile/')) },
+];
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container inner">
+        <a class="brand" href={url('/')}>
+          <span class="brand-name">大槻 海斗</span>
+          <span class="brand-sub">Works</span>
+        </a>
+        <nav aria-label="メイン">
+          <ul>
+            {
+              nav.map((n) => (
+                <li>
+                  <a href={n.href} aria-current={n.active ? 'page' : undefined}>
+                    {n.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© {new Date().getFullYear()} Ohtsuki Kaito</small>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgb(255 255 255 / 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .brand-name { font-weight: 700; font-size: 1.0625rem; }
+  .brand-sub { color: var(--muted); font-size: 0.8125rem; letter-spacing: 0.08em; }
+  nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+  nav a {
+    display: block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    color: var(--muted);
+    font-size: 0.9375rem;
+    text-decoration: none;
+  }
+  nav a:hover { color: var(--text); background: var(--surface); }
+  nav a[aria-current='page'] { color: var(--text); font-weight: 600; }
+  main { min-height: calc(100vh - 60px - 72px); }
+  .site-footer {
+    margin-top: 80px;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+  }
+</style>

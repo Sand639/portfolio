@@ -1,0 +1,62 @@
+---
+import { Image } from 'astro:assets';
+import { type Work, youtubeId, youtubeThumb, workNumber } from '../lib/works';
+
+interface Props {
+  work: Work;
+  /** 一覧の先頭など、すぐ表示される位置なら true */
+  eager?: boolean;
+}
+
+const { work, eager = false } = Astro.props;
+const { thumbnail, youtube, title } = work.data;
+const ytId = youtubeId(youtube);
+const loading = eager ? 'eager' : 'lazy';
+---
+
+<div class="thumb">
+  {
+    thumbnail ? (
+      <Image src={thumbnail} alt="" widths={[400, 800]} sizes="(min-width: 768px) 360px, 100vw" loading={loading} />
+    ) : ytId ? (
+      <img src={youtubeThumb(ytId)} alt="" loading={loading} width="480" height="360" />
+    ) : (
+      <div class="placeholder" aria-hidden="true">
+        <span class="num">{workNumber(work)}</span>
+        <span class="ttl">{title}</span>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .thumb {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .thumb :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .placeholder {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    padding: 16px;
+    background: linear-gradient(135deg, #f3f5f8, #e9edf3);
+    text-align: center;
+  }
+  .num { color: #9aa3ae; font-size: 0.75rem; letter-spacing: 0.1em; }
+  .ttl {
+    color: #7a8491;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+</style>

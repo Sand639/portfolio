@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { url } from '../lib/works';
+---
+
+<BaseLayout title="ページが見つかりません">
+  <div class="container wrap">
+    <h1>ページが見つかりません</h1>
+    <p><a href={url('/')}>作品一覧へ戻る</a></p>
+  </div>
+</BaseLayout>
+
+<style>
+  .wrap { padding: 80px 16px; text-align: center; }
+  h1 { font-size: 1.5rem; }
+</style>

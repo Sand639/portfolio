@@ -1,0 +1,80 @@
+---
+import Thumbnail from './Thumbnail.astro';
+import { type Work, CATEGORIES, isPreparing, url, workNumber } from '../lib/works';
+
+interface Props {
+  work: Work;
+  eager?: boolean;
+}
+
+const { work, eager } = Astro.props;
+const { title, summary, tags, category, order, role, team } = work.data;
+const preparing = isPreparing(work);
+// 検索対象の文字列（小文字化はクライアント側と揃える）
+const haystack = [title, summary, role, team, CATEGORIES[category], ...tags].filter(Boolean).join(' ').toLowerCase();
+---
+
+<li
+  class="card"
+  data-cat={category}
+  data-tags={JSON.stringify(tags)}
+  data-order={order}
+  data-title={title}
+  data-search={haystack}
+>
+  <a href={url(`/works/${work.id}/`)}>
+    <Thumbnail work={work} eager={eager} />
+    <div class="body">
+      <div class="meta">
+        <span class="num">{workNumber(work)}</span>
+        {preparing && <span class="badge-preparing">準備中</span>}
+      </div>
+      <h3>{title}</h3>
+      {summary && <p class="summary">{summary}</p>}
+      {
+        tags.length > 0 && (
+          <ul class="tags" aria-label="タグ">
+            {tags.map((t) => (
+              <li class="tag">{t}</li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </a>
+</li>
+
+<style>
+  .card {
+    list-style: none;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg);
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+  .card:hover {
+    border-color: #c9d0d9;
+    box-shadow: 0 6px 20px rgb(20 30 50 / 0.07);
+    transform: translateY(-2px);
+  }
+  .card[hidden] { display: none; }
+  a { display: block; height: 100%; color: inherit; text-decoration: none; }
+  a:focus-visible { outline-offset: -2px; border-radius: var(--radius); }
+  .body { padding: 14px 16px 16px; }
+  .meta { display: flex; align-items: center; gap: 8px; min-height: 20px; }
+  .num { color: var(--muted); font-size: 0.75rem; letter-spacing: 0.06em; font-variant-numeric: tabular-nums; }
+  h3 { margin-top: 2px; font-size: 1.0625rem; overflow-wrap: anywhere; }
+  .summary {
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-size: 0.875rem;
+    line-height: 1.65;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; padding: 0; }
+  .tags .tag { font-size: 0.75rem; padding: 0 8px; }
+</style>
