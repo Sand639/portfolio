@@ -8,7 +8,7 @@ period: "2026年5月"
 # team: 
 # role: 
 # hours: 
-# youtube: 
+youtube: "https://youtu.be/SU5s9qkZJNA"
 links:
   - label: "GitHub"
     url: "https://github.com/Sand639/GameJam_02"

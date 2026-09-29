@@ -7,6 +7,7 @@ summary: "弾を発射して敵を倒す 2D シューティング。"
 period: "2023年6月〜7月（3週間）"
 team: "個人制作"
 hours: 10
+youtube: "https://youtu.be/UVU9GZ7PXkU"
 ---
 
 ## 概要

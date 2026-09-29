@@ -8,5 +8,5 @@ period: "2026年3月〜"
 # team: 
 # role: 
 # hours: 
-# youtube: 
+youtube: "https://youtu.be/cQAP23DnbG0"
 ---

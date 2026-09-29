@@ -7,6 +7,7 @@ summary: "コンソールで簡易的に作ったテトリス。"
 period: "2024年2月（1週間）"
 team: "個人制作"
 hours: 10
+youtube: "https://youtu.be/wydYg25SdRw"
 links:
   - label: "ソースコード（GitHub）"
     url: "https://github.com/Sand639/hal-game-works/tree/main/012-tetris"

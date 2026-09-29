@@ -3,9 +3,11 @@ title: "プライドをかけたコンプライアンスバトル"
 order: 32
 category: game
 tags: [Unity, C#, 2D, 対戦, ゲームジャム, チーム制作]
+warning: "中指を立てる表現が含まれます。ゲーム内には中指にモザイクをかける機能があり、M キーでオン／オフを切り替えられます。"
 summary: "1台のキーボードで2人が遊ぶ、ローカル対戦の指スマ。ランダムに配られるスキルで駆け引きが変わる。"
 period: "2026年9月"
 team: "9人チーム"
+youtube: "https://youtu.be/2xGZq6jIyVk"
 links:
   - label: "GitHub"
     url: "https://github.com/Sand639/Gamejam_04"

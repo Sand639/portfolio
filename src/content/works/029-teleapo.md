@@ -8,7 +8,7 @@ period: "2026年4月（1日）"
 # team: 
 # role: 
 # hours: 
-# youtube: 
+youtube: "https://youtu.be/1IXLfSNk0bg"
 links:
   - label: "GitHub"
     url: "https://github.com/Suike08/Tell"

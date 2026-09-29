@@ -9,6 +9,7 @@ period: "2024年12月（1日）"
 team: "3人チーム（プログラマー2・プランナー1）"
 role: "UI・エンジン部分・シーン遷移"
 hours: 10
+youtube: "https://youtu.be/B6aZzYuT3OE"
 ---
 
 ## 概要

@@ -7,6 +7,7 @@ summary: "板を動かしてボールを跳ね返し、ブロックを崩す。U
 period: "2023年5月（2週間）"
 team: "個人制作"
 hours: 6
+youtube: "https://youtu.be/_s350EUwftI"
 ---
 
 ## 概要

@@ -8,6 +8,7 @@ period: "2025年6月〜7月（1カ月）"
 team: "7人チーム（プログラマー6・プランナー1）"
 role: "メインプログラマー・メインプランナー"
 hours: 30
+youtube: "https://youtu.be/mPjKhmYcobg"
 ---
 
 ## 概要

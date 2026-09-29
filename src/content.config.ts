@@ -15,6 +15,8 @@ const works = defineCollection({
       order: z.number(),
       category: z.enum(['game', 'tech', 'cg']),
       tags: z.array(z.string()).default([]),
+      /** 閲覧注意の説明。書くとサムネイルにモザイクがかかり、詳細ページでは確認後に動画を表示する */
+      warning: z.string().optional(),
       /** 一覧カードに出す一文。空のあいだは「準備中」と表示する */
       summary: z.string().optional(),
       /** 制作時期（例: 2025年4月〜7月） */

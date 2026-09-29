@@ -7,6 +7,7 @@ summary: "剣を振って敵を倒し、スコアを稼ぐ 3D アクション。
 period: "2024年2月（1週間）"
 team: "個人制作"
 hours: 30
+youtube: "https://youtu.be/izSmZwR3AFw"
 links:
   - label: "ソースコード（GitHub）"
     url: "https://github.com/Sand639/hal-game-works/tree/main/009-unity-3d-game"
