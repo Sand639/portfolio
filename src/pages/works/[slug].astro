@@ -4,7 +4,7 @@ import { Image } from 'astro:assets';
 import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import WorkCard from '../../components/WorkCard.astro';
-import { getWorks, type Work, CATEGORIES, isPreparing, url, workNumber, youtubeId } from '../../lib/works';
+import { getWorks, type Work, CATEGORIES, isPreparing, url, workMeta, youtubeId } from '../../lib/works';
 
 export const getStaticPaths = (async () => {
   const works = await getWorks(); // 新しい順
@@ -32,15 +32,13 @@ interface Props {
 }
 
 const { work, newer, older, related } = Astro.props;
-const { title, reading, warning, summary, category, tags, period, team, role, hours, thumbnail, youtube, links } = work.data;
+const { title, reading, warning, summary, category, tags, team, role, thumbnail, youtube, links } = work.data;
 const { Content } = await render(work);
 const hasBody = Boolean(work.body?.trim());
 const ytId = youtubeId(youtube);
 const facts = [
-  { label: '制作時期', value: period },
   { label: '体制', value: team },
   { label: '担当', value: role },
-  { label: '制作時間', value: hours !== undefined ? `約${hours}時間` : undefined },
 ].filter((f) => f.value);
 ---
 
@@ -54,7 +52,7 @@ const facts = [
 
     <header class="head">
       <p class="num">
-        {workNumber(work)}
+        {workMeta(work)}
         {isPreparing(work) && <span class="badge-preparing">準備中</span>}
       </p>
       {reading && <p class="reading">{reading}</p>}

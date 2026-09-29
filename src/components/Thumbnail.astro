@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { type Work, youtubeId, youtubeThumb, workNumber } from '../lib/works';
+import { type Work, youtubeId, youtubeThumb } from '../lib/works';
 
 interface Props {
   work: Work;
@@ -22,7 +22,6 @@ const loading = eager ? 'eager' : 'lazy';
       <img src={youtubeThumb(ytId)} alt="" loading={loading} width="480" height="360" />
     ) : (
       <div class="placeholder" aria-hidden="true">
-        <span class="num">{workNumber(work)}</span>
         <span class="ttl">{title}</span>
       </div>
     )

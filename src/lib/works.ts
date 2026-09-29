@@ -46,6 +46,12 @@ export function url(path = ''): string {
   return `${base}/${path.replace(/^\//, '')}`;
 }
 
+/** 制作時期 / 制作時間 の表示用（例: 2024年12月〜2025年3月（3カ月） / 約100時間）。どちらも無ければ空文字 */
+export function workMeta(work: Work): string {
+  const { period, hours } = work.data;
+  return [period, hours !== undefined ? `約${hours}時間` : undefined].filter(Boolean).join(' / ');
+}
+
 /** 作品番号の表示用（#001） */
 export function workNumber(work: Work): string {
   return `#${String(work.data.order).padStart(3, '0')}`;

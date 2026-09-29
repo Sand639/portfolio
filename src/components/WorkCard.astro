@@ -1,6 +1,6 @@
 ---
 import Thumbnail from './Thumbnail.astro';
-import { type Work, CATEGORIES, isPreparing, url, workNumber } from '../lib/works';
+import { type Work, CATEGORIES, isPreparing, url, workMeta } from '../lib/works';
 
 interface Props {
   work: Work;
@@ -26,7 +26,7 @@ const haystack = [title, reading, summary, role, team, CATEGORIES[category], ...
     <Thumbnail work={work} eager={eager} />
     <div class="body">
       <div class="meta">
-        <span class="num">{workNumber(work)}</span>
+        <span class="num">{workMeta(work)}</span>
         {preparing && <span class="badge-preparing">準備中</span>}
       </div>
       <h3>{reading ? <ruby>{title}<rt>{reading}</rt></ruby> : title}</h3>
@@ -64,6 +64,7 @@ const haystack = [title, reading, summary, role, team, CATEGORIES[category], ...
   .body { padding: 14px 16px 16px; }
   .meta { display: flex; align-items: center; gap: 8px; min-height: 20px; }
   .num { color: var(--muted); font-size: 0.75rem; letter-spacing: 0.06em; font-variant-numeric: tabular-nums; }
+  .num:empty { display: none; }
   h3 { margin-top: 2px; font-size: 1.0625rem; overflow-wrap: anywhere; }
   h3 rt { color: var(--muted); font-size: 0.625em; font-weight: 400; letter-spacing: 0.06em; }
   .summary {
