@@ -32,13 +32,20 @@ interface Props {
 }
 
 const { work, newer, older, related } = Astro.props;
-const { title, reading, warning, summary, category, tags, team, role, thumbnail, youtube, links } = work.data;
+const { title, reading, warning, summary, category, tags, genre, engine, language, players, team, role, status, thumbnail, youtube, links } = work.data;
 const { Content } = await render(work);
-const hasBody = Boolean(work.body?.trim());
+// 「<!-- 未記入 -->」のようなコメントだけの本文は空として扱う
+const hasBody = Boolean(work.body?.replace(/<!--[\s\S]*?-->/g, '').trim());
 const ytId = youtubeId(youtube);
+// 情報欄は全作品でこの順番に並べる（未記入の項目は出さない）
 const facts = [
+  { label: 'ジャンル', value: genre },
+  { label: '開発環境', value: engine },
+  { label: '使用言語', value: language },
+  { label: 'プレイ人数', value: players },
   { label: '体制', value: team },
-  { label: '担当', value: role },
+  { label: '役職', value: role },
+  { label: '状態', value: status },
 ].filter((f) => f.value);
 ---
 

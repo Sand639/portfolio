@@ -21,9 +21,19 @@ const works = defineCollection({
       summary: z.string().optional(),
       /** 制作時期（例: 2025年4月〜7月） */
       period: z.string().optional(),
+      /** ジャンル（例: 2Dアクション） */
+      genre: z.string().optional(),
+      /** 開発環境（例: Unity 6000.0.47f1 / Visual Studio 2022・DirectX 11） */
+      engine: z.string().optional(),
+      /** 使用言語（例: C# / C言語・C++） */
+      language: z.string().optional(),
+      /** プレイ人数（例: 2人） */
+      players: z.string().optional(),
+      /** 完成度など（例: プロトタイプ / 未完成） */
+      status: z.string().optional(),
       /** 体制（例: 個人制作 / 8人チーム） */
       team: z.string().optional(),
-      /** 担当（例: メインプログラマー） */
+      /** 役職（例: プログラマー / メインプランナー / リーダー）。担当箇所の詳細は本文の「担当したこと」に書く */
       role: z.string().optional(),
       /** 制作時間（時間） */
       hours: z.number().optional(),
