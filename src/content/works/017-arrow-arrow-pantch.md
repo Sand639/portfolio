@@ -4,7 +4,7 @@ order: 17
 category: game
 tags: [C言語, C++, Nintendo Switch, OpenGL, Joy-Con, アクション, 個人制作]
 summary: "Joy-Con の六軸センサーを使った Nintendo Switch 開発機向けのアクションゲーム。"
-period: "2024年7月〜9月（1カ月）"
+period: "2024年7月〜2024年9月（1カ月）"
 team: "個人制作"
 hours: 70
 youtube: "https://youtu.be/blcXSCTFx4o"

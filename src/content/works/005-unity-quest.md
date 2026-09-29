@@ -4,7 +4,7 @@ order: 5
 category: game
 tags: [Unity, C#, 2.5D, アクション, 個人制作]
 summary: "プレイヤーを操作して敵を倒す 2.5D アクション。C# で最初に作ったゲーム。"
-period: "2023年5月〜7月（2カ月）"
+period: "2023年5月〜2023年7月（2カ月）"
 team: "個人制作"
 hours: 40
 youtube: "https://youtu.be/D-osawpMo5U"
