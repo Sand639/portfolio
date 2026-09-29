@@ -8,6 +8,9 @@ period: "2024年1月（3日）"
 team: "個人制作"
 hours: 20
 youtube: "https://youtu.be/CbF72RDmhTI"
+links:
+  - label: "ソースコード（GitHub）"
+    url: "https://github.com/Sand639/hal-game-works/tree/main/022-pop-ball"
 ---
 
 ## 概要

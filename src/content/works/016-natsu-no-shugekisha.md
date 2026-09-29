@@ -8,6 +8,9 @@ period: "2024年8月（1日）"
 team: "2人チーム（プログラマー1・プランナー1）"
 role: "プログラム全般・ゲーム案"
 hours: 8
+links:
+  - label: "ソースコード（GitHub）"
+    url: "https://github.com/Sand639/hal-game-works/tree/main/016-natsu-no-shugekisha"
 ---
 
 ## 概要
