@@ -1,5 +1,6 @@
 ---
 title: "登龍門"
+reading: "とうりゅうもん"
 order: 24
 category: game
 tags: [C言語, C++, DirectX11, Joy-Con, 2D, シューティング, チーム制作]

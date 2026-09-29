@@ -7,6 +7,9 @@ summary: "矢印を操作して右下のゴールを目指す、コンソール�
 period: "2024年2月（1週間）"
 team: "個人制作"
 hours: 20
+links:
+  - label: "ソースコード（GitHub）"
+    url: "https://github.com/Sand639/hal-game-works/tree/main/011-pseudo-3d-maze"
 ---
 
 ## 概要

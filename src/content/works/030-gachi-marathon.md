@@ -1,6 +1,6 @@
 ---
 title: "ガチマラソン"
-order: 31
+order: 30
 category: game
 tags: [Unity, C#, ゲームジャム, チーム制作]
 # summary: 

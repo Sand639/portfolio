@@ -8,6 +8,9 @@ period: "2023年9月（10日間）"
 team: "個人制作"
 hours: 40
 youtube: "https://youtu.be/1OPreINTjTQ"
+links:
+  - label: "ソースコード（GitHub）"
+    url: "https://github.com/Sand639/hal-game-works/tree/main/006-spring"
 ---
 
 ## 概要

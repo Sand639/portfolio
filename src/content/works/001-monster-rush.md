@@ -8,6 +8,9 @@ period: "2023年5月（1週間）"
 team: "個人制作"
 hours: 30
 youtube: "https://youtu.be/svq8kXRklXo"
+links:
+  - label: "ソースコード（GitHub）"
+    url: "https://github.com/Sand639/hal-game-works/tree/main/001-monster-rush"
 ---
 
 ## 概要

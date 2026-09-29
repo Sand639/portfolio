@@ -1,5 +1,6 @@
 ---
 title: "神輿祭"
+reading: "みこしまつり"
 order: 19
 category: game
 tags: [C言語, C++, DirectX11, Joy-Con, 3D, レース, チーム制作]

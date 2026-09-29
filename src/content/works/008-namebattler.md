@@ -7,6 +7,9 @@ summary: "ダンジョンを探索してゴールを目指すコンソールゲ�
 period: "2023年12月（3週間）"
 team: "個人制作"
 hours: 50
+links:
+  - label: "ソースコード（GitHub）"
+    url: "https://github.com/Sand639/hal-game-works/tree/main/008-namebattler"
 ---
 
 ## 概要

@@ -8,6 +8,9 @@ period: "2024年1月（2週間）"
 team: "個人制作"
 hours: 15
 youtube: "https://youtu.be/PT4lN7MfAXQ"
+links:
+  - label: "ソースコード（GitHub）"
+    url: "https://github.com/Sand639/hal-game-works/tree/main/023-hack-and-slash"
 ---
 
 ## 概要

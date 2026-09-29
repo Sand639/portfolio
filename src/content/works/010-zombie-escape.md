@@ -8,6 +8,9 @@ period: "2024年1月（1週間）"
 team: "個人制作"
 hours: 30
 youtube: "https://youtu.be/N-E39OJcxEI"
+links:
+  - label: "ソースコード（GitHub）"
+    url: "https://github.com/Sand639/hal-game-works/tree/main/010-zombie-escape"
 ---
 
 ## 概要

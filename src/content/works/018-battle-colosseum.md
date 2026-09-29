@@ -7,6 +7,9 @@ summary: "C++ のクラスと継承を使って作ったコンソールゲーム
 period: "2024年9月（3週間）"
 team: "個人制作"
 hours: 30
+links:
+  - label: "ソースコード（GitHub）"
+    url: "https://github.com/Sand639/hal-game-works/tree/main/018-battle-colosseum"
 ---
 
 ## 概要

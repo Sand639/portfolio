@@ -8,6 +8,9 @@ period: "2023年5月〜7月（2カ月）"
 team: "個人制作"
 hours: 40
 youtube: "https://youtu.be/D-osawpMo5U"
+links:
+  - label: "ソースコード（GitHub）"
+    url: "https://github.com/Sand639/hal-game-works/tree/main/005-unity-quest"
 ---
 
 ## 概要

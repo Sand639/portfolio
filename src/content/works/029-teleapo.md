@@ -1,6 +1,6 @@
 ---
-title: "Tell"
-order: 30
+title: "テレアポ100件かけれるかな？"
+order: 29
 category: game
 tags: [Unity, C#, ゲームジャム, チーム制作]
 # summary: 

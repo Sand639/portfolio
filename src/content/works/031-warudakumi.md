@@ -1,6 +1,6 @@
 ---
 title: "悪堕組（Warudakumi）"
-order: 29
+order: 31
 category: game
 tags: [Unreal Engine, C++, チーム制作]
 # summary: 
@@ -9,7 +9,4 @@ period: "2026年3月〜"
 # role: 
 # hours: 
 # youtube: 
-links:
-  - label: "GitHub"
-    url: "https://github.com/UesugiNaoki/Warudakumi"
 ---

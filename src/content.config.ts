@@ -9,6 +9,8 @@ const works = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
+      /** 作品名の読みがな（漢字のタイトルのとき）。詳細ページに表示し、検索にも使う */
+      reading: z.string().optional(),
       /** 制作順。大きいほど新しい。一覧の「新しい順」はこの値で並ぶ */
       order: z.number(),
       category: z.enum(['game', 'tech', 'cg']),

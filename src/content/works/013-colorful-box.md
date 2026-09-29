@@ -7,6 +7,9 @@ summary: "マウスでオブジェクトを動かし、プレイヤーをゴー�
 period: "2024年2月（1週間）"
 team: "個人制作"
 hours: 10
+links:
+  - label: "ソースコード（GitHub）"
+    url: "https://github.com/Sand639/hal-game-works/tree/main/013-colorful-box"
 ---
 
 ## 概要

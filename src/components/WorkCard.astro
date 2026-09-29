@@ -8,10 +8,10 @@ interface Props {
 }
 
 const { work, eager } = Astro.props;
-const { title, summary, tags, category, order, role, team } = work.data;
+const { title, reading, summary, tags, category, order, role, team } = work.data;
 const preparing = isPreparing(work);
 // 検索対象の文字列（小文字化はクライアント側と揃える）
-const haystack = [title, summary, role, team, CATEGORIES[category], ...tags].filter(Boolean).join(' ').toLowerCase();
+const haystack = [title, reading, summary, role, team, CATEGORIES[category], ...tags].filter(Boolean).join(' ').toLowerCase();
 ---
 
 <li
@@ -29,7 +29,7 @@ const haystack = [title, summary, role, team, CATEGORIES[category], ...tags].fil
         <span class="num">{workNumber(work)}</span>
         {preparing && <span class="badge-preparing">準備中</span>}
       </div>
-      <h3>{title}</h3>
+      <h3>{reading ? <ruby>{title}<rt>{reading}</rt></ruby> : title}</h3>
       {summary && <p class="summary">{summary}</p>}
       {
         tags.length > 0 && (
@@ -65,6 +65,7 @@ const haystack = [title, summary, role, team, CATEGORIES[category], ...tags].fil
   .meta { display: flex; align-items: center; gap: 8px; min-height: 20px; }
   .num { color: var(--muted); font-size: 0.75rem; letter-spacing: 0.06em; font-variant-numeric: tabular-nums; }
   h3 { margin-top: 2px; font-size: 1.0625rem; overflow-wrap: anywhere; }
+  h3 rt { color: var(--muted); font-size: 0.625em; font-weight: 400; letter-spacing: 0.06em; }
   .summary {
     margin: 6px 0 0;
     color: var(--muted);

@@ -1,5 +1,6 @@
 ---
 title: "張満腹"
+reading: "ちょうまんぷく"
 order: 21
 category: game
 tags: [C言語, C++, DirectX11, Joy-Con, 2D, アクション, チーム制作]
