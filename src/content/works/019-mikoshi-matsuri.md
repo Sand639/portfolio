@@ -9,6 +9,7 @@ period: "2024年11月（2週間）"
 team: "4人チーム（プログラマー2・プランナー1・デザイナー1）＋リーダー"
 role: "プログラム全般"
 hours: 30
+youtube: "https://youtu.be/TDWmLhGyKt4"
 ---
 
 ## 概要
